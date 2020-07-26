@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Principal"
+        android:icon="@drawable/icon_principal"
+        android:title="Principal" />
+    <item
+        android:id="@+id/Social"
+        android:icon="@drawable/icon_social"
+        android:title="Social" />
+    <item
+        android:id="@+id/Promociones"
+        android:icon="@drawable/icon_promotion"
+        android:title="Promociones" />
+    <item
+        android:id="@+id/Notificaciones"
+        android:icon="@drawable/icon_notificacion"
+        android:title="Notificaciones" />
+    <item
+        android:id="@+id/Foros"
+        android:icon="@drawable/icon_foro"
+        android:title="Foros" />
+
+
+    <item android:title="ETIQUETAS RECIENTES" >
+        <menu>
+            <item
+                android:id="@+id/coordiCarrera"
+                android:icon="@drawable/icon_etiqueta"
+                android:title="COORDINACION DE CARRERA" />
+        </menu>
+    </item>
+
+    <item android:title="TODAS LAS ETIQUETAS">
+        <menu>
+            <item
+                android:id="@+id/Destacados"
+                android:icon="@drawable/icon_destacado"
+                android:title="Destacados" />
+            <item
+                android:id="@+id/Propuestos"
+                android:icon="@drawable/icon_pospuesto"
+                android:title="Propuestos" />
+        </menu>
+    </item>
+</menu>
