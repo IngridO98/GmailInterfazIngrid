@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -59,43 +60,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawerLayout.closeDrawer(GravityCompat.START);
         if(item.getItemId()==R.id.Principal){
-            fragmenManager=getSupportFragmentManager();
-            fragmentTransaction=fragmenManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_fragment, new PrincipalFragment());
-            fragmentTransaction.commit();
+            showSelectedFragment(new PrincipalFragment());
         }
-
         if(item.getItemId()==R.id.Social){
-            fragmenManager=getSupportFragmentManager();
-            fragmentTransaction=fragmenManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_fragment, new SocialFragment());
-            fragmentTransaction.commit();
+            showSelectedFragment(new SocialFragment());
         }
-
         if(item.getItemId()==R.id.Promociones){
-
+            showSelectedFragment(new SocialFragment());
         }
-
         if(item.getItemId()==R.id.Notificaciones){
-
+            showSelectedFragment(new SocialFragment());
         }
-
         if(item.getItemId()==R.id.Foros){
-
+            showSelectedFragment(new SocialFragment());
         }
-
         if(item.getItemId()==R.id.coordiCarrera){
-
+            showSelectedFragment(new SocialFragment());
         }
-
         if(item.getItemId()==R.id.Destacados){
-
+            showSelectedFragment(new SocialFragment());
         }
-
         if(item.getItemId()==R.id.Propuestos){
-
+            showSelectedFragment(new SocialFragment());
         }
 
         return true;
+    }
+
+    private void showSelectedFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_fragment,fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
     }
 }
